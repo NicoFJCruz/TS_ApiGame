@@ -5,10 +5,6 @@ const Images = require("./Images");
 const Lyrics = require("./Lyrics");
 const Videos = require("./Videos");
 
-//Relation Songs - Images
-Songs.hasMany(Images);
-Images.belongsTo(Songs);
-
 //Relation Songs - Lyrics
 Songs.hasMany(Lyrics);
 Lyrics.belongsTo(Songs);

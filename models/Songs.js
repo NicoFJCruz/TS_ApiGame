@@ -6,6 +6,7 @@ class Song extends S.Model {}
 Song.init(
   {
     title: { type: S.STRING, allowNull: false },
+    length: { type: S.STRING },
     link: { type: S.STRING },
   },
   { sequelize: db, modelName: "songs" }

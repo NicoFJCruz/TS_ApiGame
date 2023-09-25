@@ -5,7 +5,7 @@ class Lyric extends S.Model {}
 
 Lyric.init(
   {
-    link: { type: S.STRING },
+    text: { type: S.STRING },
   },
   { sequelize: db, modelName: "lyrics" }
 );
