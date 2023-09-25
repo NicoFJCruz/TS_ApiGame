@@ -3,7 +3,7 @@ const db = require("./db");
 const cors = require("cors");
 //const cookieParser = require("cookie-parser");
 const model = require("./models");
-//const routes = require("./routes");
+const routes = require("./routes");
 const volleyball = require("volleyball");
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(cors(corsOptions));
 //app.use(cookieParser());
 app.use(express.json());
 app.use(volleyball);
-//app.use("/api", routes);
+app.use("/api", routes);
 
 db.sync({ force: false }).then(() => {
   console.log("DB connected");
