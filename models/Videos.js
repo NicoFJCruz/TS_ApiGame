@@ -8,7 +8,8 @@ Video.init(
     title: { type: S.STRING},
     link: { type: S.STRING },
   },
-  { sequelize: db, modelName: "videos" }
+  { sequelize: db, modelName: "videos"},
+  { timestamps: false },
 );
 
 module.exports = Video;

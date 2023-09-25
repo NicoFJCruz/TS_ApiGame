@@ -7,7 +7,8 @@ Lyric.init(
   {
     text: { type: S.STRING },
   },
-  { sequelize: db, modelName: "lyrics" }
+  { sequelize: db, modelName: "lyrics" },
+  { timestamps: false },
 );
 
 module.exports = Lyric;

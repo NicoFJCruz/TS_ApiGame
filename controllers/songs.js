@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const { Songs, Lyrics, Videos } = require("../models");
+const { Songs, Lyrics, Videos, Albums } = require("../models");
 
 const songsAll = async (req, res, next) => {
   try {
