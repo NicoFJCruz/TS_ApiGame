@@ -8,6 +8,7 @@ Song.init(
     title: { type: S.STRING, allowNull: false },
     length: { type: S.STRING },
     link: { type: S.STRING },
+    songOrder: { type: S.INTEGER },
   },
   { sequelize: db, modelName: "songs", timestamps: false }
 );

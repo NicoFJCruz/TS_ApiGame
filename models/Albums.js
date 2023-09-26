@@ -8,6 +8,7 @@ Album.init(
     title: { type: S.STRING, allowNull: false },
     link: { type: S.STRING },
     release_date: { type: S.STRING },
+    color: { type: S.STRING },
   },
   { sequelize: db, modelName: "albums", timestamps: false }
 );
