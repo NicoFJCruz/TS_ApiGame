@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const { Songs, Lyrics, Videos, Albums } = require("../models");
+const { Songs, Lyrics, Videos, Albums, Images } = require("../models");
 
 const songsAll = async (req, res, next) => {
   try {
@@ -16,8 +16,16 @@ const songOne = async (req, res, next) => {
   try {
     const { id } = req.params;
     const song = await Songs.findByPk(id, {
-      include: [{ model: Lyrics }, { model: Videos }, { model: Albums }],
+      include: [
+        { model: Lyrics },
+        { model: Videos },
+        { model: Albums, include: { model: Images } },
+      ],
     });
+
+    if (song && song.lyrics) {
+      song.lyrics.sort((a, b) => a.songOrder - b.songOrder);
+    }
 
     res.send(song);
   } catch (error) {
