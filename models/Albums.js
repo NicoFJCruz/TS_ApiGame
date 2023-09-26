@@ -9,8 +9,7 @@ Album.init(
     link: { type: S.STRING },
     release_date: { type: S.STRING },
   },
-  { sequelize: db, modelName: "albums" },
-  { timestamps: false },
+  { sequelize: db, modelName: "albums", timestamps: false }
 );
 
 module.exports = Album;

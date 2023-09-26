@@ -9,8 +9,7 @@ Song.init(
     length: { type: S.STRING },
     link: { type: S.STRING },
   },
-  { sequelize: db, modelName: "songs" },
-  { timestamps: false },
+  { sequelize: db, modelName: "songs", timestamps: false }
 );
 
 module.exports = Song;

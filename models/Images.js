@@ -7,8 +7,7 @@ Image.init(
   {
     link: { type: S.STRING },
   },
-  { sequelize: db, modelName: "images" },
-  { timestamps: false },
+  { sequelize: db, modelName: "images", timestamps: false }
 );
 
 module.exports = Image;
