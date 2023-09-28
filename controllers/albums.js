@@ -14,7 +14,7 @@ const albumsAll = async (req, res, next) => {
 
 const albumOne = async (req, res, next) => {
   try {
-    const { id } = req.Albums;
+    const { id } = req.params;
     const album = await Albums.findByPk(id, {
       include: [{ model: Images }],
     });
