@@ -5,6 +5,6 @@ const albumRouter = require("./Albums")
 const router = express.Router();
 
 router.use("/songs", songRouter);
-router.use("/albums", songRouter);
+router.use("/albums", albumRouter);
 
 module.exports = router;

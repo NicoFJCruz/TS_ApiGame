@@ -4,7 +4,7 @@ const { Songs, Lyrics, Videos, Albums, Images } = require("../models");
 const songsAll = async (req, res, next) => {
   try {
     const songs = await Songs.findAll({ include: { model: Family } });
-
+    
     res.send(songs);
   } catch (error) {
     console.error(error);
